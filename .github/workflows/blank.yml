@@ -13,5 +13,6 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: gh release view --json assets
+      - run: gh release view --json assets
+      - run: echo hello > hello.txt
+      - run: gh release upload ergerg hello.txt
