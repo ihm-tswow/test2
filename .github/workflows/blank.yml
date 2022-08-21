@@ -15,4 +15,5 @@ jobs:
       - uses: actions/checkout@v3
       - run: gh release view --json assets
       - run: echo hello > hello.txt
+      - run: gh release delete-asset ergerg -y
       - run: gh release upload ergerg hello.txt
